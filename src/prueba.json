@@ -1,0 +1,205 @@
+{
+    "ConnectionStrings": {
+        "SiagieQuery": "Data Source=10.200.9.20;Initial Catalog=db_siagie_evaluacion_recuperacion;User ID=user_siagie;Password=user_siagie@@2021; Application Name=MSAEvaluacionPeriodoDev;Max Pool Size=1000;Pooling=true;",
+        "SiagieQuery2_20": "Data Source=10.200.9.20;Initial Catalog=siagie2_20;User ID=user_siagie;Password=user_siagie@@2021; Application Name=SiagieAPI",
+        "SiagieCommand": "Data Source=10.200.9.20;Initial Catalog=db_siagie_evaluacion_recuperacion;User ID=user_siagie;Password=user_siagie@@2021; Application Name=MSAEvaluacionPeriodoDev;Max Pool Size=1000;Pooling=true;",
+        "SiagieCommand2_20": "Data Source=10.200.9.20;Initial Catalog=siagie2_20;User ID=user_siagie_dev;Password=user_siagie_dev; Application Name=SiagieAPI"
+    },
+    "Excel": {
+        "Path": "D:\\PROYECTOS\\MINEDU\\MSA-EVALUACION\\Api\\Evaluacion\\Temp\\",
+        "WorkBookPassword": "e@mfF!*HCDq8",
+        "WorkSheetPassword": "e@mfF!*HCDq8",
+        "WorkBookAuthor": "SIAGIE",
+        "WorkBookCompany": "MINEDU",
+        "WorkBookTitle": "Plantilla SIAGIE",
+        "WorkBookCategoryModeP": "Plantilla de Evaluacion por Periodo",
+        "WorkBookCategoryModeA": "Plantilla de Evaluacion Calificativo Anual",
+        "WorkBookCategoryModeF": "Plantilla de Evaluacion por Notas Finales",
+        "WorkBookCategoryModeAAnt": "Plantilla de Evaluacion de Anio Anterior",
+        "WorkBookTag": "807FC7B8CAC9133F8D9BE610327AFE90B9D5F4B4",
+        "WorkBookSubjet": "SIAGIE@MINEDU",
+        "TipoMimeExcel": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "GenerarEnServer": "1",
+        "PlantillaExcel": "Plantilla_RegistroNotasPorPeriodo.xlsx",
+        "PlantillaExcelAlumnosDesaprobados": "Plantilla_AlumnosDesaprobados.xlsx",
+        "CaracterMinimoExcelNotaAnual": "1",
+        "CaracterMaximoExcelNotaAnual": "350",
+        "CaracterMinimoExcelNotaFinal": "1",
+        "CaracterMaximoExcelNotaFinal": "350",
+        "CaracterMinimoExcelNotaPeriodo": "10",
+        "CaracterMaximoExcelNotaPeriodo": "350",
+        "CaracterMinimoExcelNotaFinal2020": "10",
+        "CaracterMaximoExcelNotaFinal2020": "350"
+    },
+    "Reportes": {
+        "PathReporteRecuperaciones": "C:\\MINEDU\\ArhchivoSIAGIE\\Reporte\\Recuperaciones\\EvaluacionExterna\\"
+    },
+    "Actas": {
+        "PathActasRecuperaciones": [
+            {
+                "name": "C:\\MINEDU\\ArhchivoSIAGIE\\Reporte\\Actas\\"
+            },
+            {
+                "name": "\\10.200.8.134\\ArhchivoSIAGIE\\Reporte\\SiagieWEB_FarmPreQa\\Actas\\"
+            },
+            {
+                "name": "\\10.200.8.134\\ArhchivoSIAGIE\\Reporte\\SiagieWEB_FarmPreQa\\Actas\\"
+            }
+        ],
+    },
+    "Serilog": {
+        "SeqServerUrl": null,
+        "LogstashgUrl": null,
+        "Using": [
+            "Serilog.Sinks.File"
+        ],
+        "MinimumLevel": {
+            "Default": "Information",
+            "Override": {
+                "Minedu": "Warning",
+                "Minedu.Siagie": "Information",
+                "System": "Warning"
+            }
+        },
+        "Enrich": [
+            "FromLogContext",
+            "WithExceptionDetails"
+        ],
+        "WriteTo": [
+            {
+                "Name": "File",
+                "Args": {
+                    "path": "C:\\logs\\siagie-msa\\SiagieMsa-evaluacionRecuperacionQa\\log_node_001-.txt",
+                    "rollingInterval": "Day"
+                }
+            }
+        ]
+    },
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "SecurityCentralConfiguration": {
+        "ValidateByHeader": false,
+        "ValidateUserCentral": false,
+        "ValidateUserCentralByIe": true
+    },
+    "RequestConfiguration": {
+        "userParameterName": "X-WSP",
+        "KeySHAJwtRsaParameterName": "X-Key",
+        "userTokenParameterName": "X-WSP",
+        "rolTokenParameterName": "X-WSG"
+    },
+    "GlobalConfiguration": {
+        "JwtRsaConfiguration": true,
+        "RequestConfiguration": true,
+        "DevMode": false
+    },
+    "MsaAppDevModeConfiguration": {
+        "UserHeader": "JGRANADOS",
+        "KeyShaRsaJwt": "xxxxxxx",
+        "RsaJwt": "xxxxxxxxxxxxxxxxxxxxxxx",
+        "UserApp": "JGRANADOS",
+        "RolApp": "011"
+    },
+    "SoaEndpointConfiguration": {
+        "CentralService": "http://10.200.8.135:2050/Central/MED.SeguridadWAS.MedSeguridadServices.svc",
+        "EscaleService": "http://10.200.8.135:2094/Services.svc/Escale"
+    },
+    "JwtRsaConfiguration": {
+        "SecretKey": "ZvkYYnyM929FM4NW9_hSis7_x3_9rymsDAx9yuOcc1I",
+        "RsaLocalFolder": "Setup",
+        "RsaRemoteFolder": "C:\\Siagie\\Msa\\Rsa\\JwtRsaToken",
+        "RsaPublicName": "rsa-0001-SiagieMsa-public-key.pem",
+        "RsaMode": 1,
+        "ValidateLifetime": false,
+        "ValidateIssuer": false,
+        "ValidateAudience": false
+    },
+    "QueueConfiguration": {
+        "HostName": "rabbitmq://192.168.7.62:5672",
+        "VirtualHost": "/",
+        "Username": "rabbitmq",
+        "Password": "rabbitmq$",
+        "QueueName": "ColaInformeProgresoRepairQa",
+        "EndpointValidacionEvaluacionPeriodo": "ColaValidacionEvaluacionPeriodoQa",
+        "EndpointValidacionProcesamientoSeccion": "ColaValidacionProcesamientoSeccionQa",
+        "EndpointValidacionProcesamientoSeccionFase": "ColaValidacionProcesamientoSeccionFaseQa",
+        "EndpointInstitucionEducativaSeccionGrabacion": "ColaGrabacionInstitucionEducativaSeccionGrabacionQa",
+        "EndpointInstitucionEducativaSeccionEliminacion": "ColaGrabacionInstitucionEducativaSeccionEliminacionQa",
+        "EndpointGrabacionInformeProgresoRepairGenerando": "ColaGrabacionInformeProgresoRepairGenerandoQa",
+        "EndpointEvaluacionPeriodoCierreAnualValidacion": "ColaValidacionCierreAnualSeccionQa",
+        "EndpointEvaluacionRecuperacionCierreAnualValidacion": "ColaValidacionRecuperacionCierreAnualGradoQa",
+        "EndpointEvaluacionRecuperacionValidacion": "ColaValidacionEvaluacionRecuperacionQa"
+    },
+    "ServiceRest": {
+        "loadBalancer": "",
+        "services": [
+            {
+                "name": "siagie-msa-gateway-ie-administracion",
+                "host": "192.168.7.55",
+                "scheme": "http",
+                "port": "5430",
+                "gatewayPath": "siagie-msa-assurance"
+            },
+            {
+                "name": "siagie-msa-gateway-maestro",
+                "host": "192.168.7.55",
+                "scheme": "http",
+                "port": "5430",
+                "gatewayPath": "siagie-msa-assurance"
+            },
+            {
+                "name": "siagie-msa-gateway-evaluacion-general",
+                "host": "192.168.7.55",
+                "scheme": "http",
+                "port": "5430",
+                "gatewayPath": "siagie-msa-assurance"
+            },
+            {
+                "name": "siagie-msa-gateway-proceso",
+                "host": "192.168.7.55",
+                "scheme": "http",
+                "port": "5430",
+                "gatewayPath": "siagie-msa-assurance"
+            },
+            {
+                "name": "siagie-msa-gateway-evaluacion-periodo",
+                "host": "192.168.7.55",
+                "scheme": "http",
+                "port": "5430",
+                "gatewayPath": "siagie-msa-assurance"
+            }
+        ]
+    },
+    "JwtSiagieMsaConfiguration": {
+        "Agw": "Int-siagie-msa-api-2048",
+        "RsaLocalFolder": "Setup",
+        "RsaPrivateName": "rsa-0001-SiagieMsa-private-key.pem",
+        "RsaRemoteFolder": "C:\\Siagie\\Msa\\Rsa\\JwtRsaToken",
+        "Expires_second": 30,
+        "NotBefore_second": -20,
+        "Audience": "MSA-SiagieClient.v4",
+        "Issuer": "MSA-SiagieServer.v4",
+        "Agl": "MSA00001",
+        "Agp": "666",
+        "RsaMode": 1
+    },
+    "JwtPadronConfiguration": {
+        "Agw": "wcBU58Cn2uktiqiv9Jmy1O02GAPxw11r",
+        "RsaLocalFolder": "Setup",
+        "RsaPrivateName": "rsa-0003-Central-private-key.pem",
+        "RsaRemoteFolder": "C:\\Siagie\\Msa\\Rsa\\JwtRsaToken",
+        "Expires_second": 30,
+        "NotBefore_second": -20,
+        "Audience": "MSA-SiagieClient.v4",
+        "Issuer": "MSA-SiagieServer.v4",
+        "Agl": "MSA00001",
+        "Agp": "666",
+        "RsaMode": 1
+    },
+    "UrlDocumentoValidacion": "https://git.minedu.gob.pe/si0098-siagie/docs-siagie/-/blob/rfc/v2022s01/1.documentos-tecnicos/9.arquitectura-de-software/MSA-VALIDACIONES.docx",
+    "AllowedHosts": "*"
+}
