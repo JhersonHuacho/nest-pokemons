@@ -75,3 +75,27 @@ Nest is [MIT licensed](LICENSE).
 
 
 ## 1. Servir contenido estatico
+## 2. Global Prefix
+  app.setGlobalPrefix('api/v2');
+## 3. Docker - Docker Compose - MongoDB
+  arhivo "docker-compose-yaml"
+  $ docker-compose up -d
+## 4. README
+  Ejecutar en desarrollo
+  1. Clonar el repositorio
+  2. Ejecutar
+  ```
+  npm install
+  ```
+  3. Tener Nest CLI instalado
+  ```
+  npm i -g @nestjs/cli
+  ```
+  4. Levantar la base de datos
+  ```
+  docker-compose up -d
+  ```
+  Stack Usado
+  * MongoDB
+  * Nest
+## 5. Conectar Nest con MongoDB
