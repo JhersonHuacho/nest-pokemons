@@ -1,0 +1,40 @@
+import * as Joi from 'joi';
+
+export const JoiValidationSchema = Joi.object({
+  MONGO_URI: Joi.string().required(),
+  PORT: Joi.number().default(3000),
+  DEFAULT_LIMIT: Joi.number().default(5),
+});
+//   NODE_ENV: Joi.string()
+//     .valid('development', 'production', 'test', 'provision')
+//     .default('development'),
+//   PORT: Joi.number().default(3000),
+//   MONGODB_URI: Joi.string().required(),
+//   JWT_SECRET: Joi.string().required(),
+//   JWT_EXPIRATION: Joi.number().default(3600),
+//   JWT_REFRESH_EXPIRATION: Joi.number().default(3600),
+//   JWT_SECRET_REFRESH: Joi.string().required(),
+//   JWT_SECRET_RESET: Joi.string().required(),
+//   JWT_EXPIRATION_RESET: Joi.number().default(3600),
+//   JWT_SECRET_CONFIRM: Joi.string().required(),
+//   JWT_EXPIRATION_CONFIRM: Joi.number().default(3600),
+//   JWT_SECRET_INVITE: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_CONFIRM: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_CONFIRM: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_CONFIRM: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_CONFIRM: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_RESEND: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_RESEND: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_RESEND_CONFIRM: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_RESEND_CONFIRM: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_RESEND_RESEND: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_RESEND_RESEND: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_RESEND_RESEND_CONFIRM: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_RESEND_RESEND_CONFIRM: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_RESEND_RESEND_RESEND: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_RESEND_RESEND_RESEND: Joi.number().default(3600),
+//   JWT_SECRET_INVITE_RESEND_RESEND_RESEND_RESEND_CONFIRM: Joi.string().required(),
+//   JWT_EXPIRATION_INVITE_RESEND_RESEND_RESEND_RESEND_CONFIRM: Joi.number().default(3600),    }
