@@ -72,7 +72,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
-
+pokeapi.co
 
 ## 1. Servir contenido estatico
 ## 2. Global Prefix
