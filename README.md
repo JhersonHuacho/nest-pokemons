@@ -95,7 +95,15 @@ pokeapi.co
   ```
   docker-compose up -d
   ```
-  Stack Usado
+  
+  5. Reconstruir la base de datos con la semilla
+    ```
+    POST http://localhost:3000/api/v2/seed
+    ```
+
+ Stack Usado
   * MongoDB
-  * Nest
+  * Nest  
 ## 5. Conectar Nest con MongoDB
+## 6. Seed y paginación
+  Patrón adaptador
